@@ -1,0 +1,54 @@
+<html class="a-fullscreen">
+
+<head>
+
+    <meta http-equiv="origin-trial" data-feature="WebVR (For Chrome M59+)" data-expires="2017-07-28"
+        content="ArFv1ZeTwzkhjNE00uAE+XtiQB41fwqG/TqlFMLrepd9sforQSvQE/tgfIbUMYNuNre4QR1k4/z8xp2mV3dbhwwAAABeeyJvcmlnaW4iOiJodHRwczovL2FmcmFtZS5pbzo0NDMiLCJmZWF0dXJlIjoiV2ViVlIxLjEiLCJleHBpcnkiOjE1MDEyMTcwMDIsImlzU3ViZG9tYWluIjp0cnVlfQ==">
+    <meta charset="utf-8">
+    <title>Video</title>
+    <meta name="description" content="Video - A-Frame">
+    <meta aframe-injected="" name="viewport"
+        content="width=device-width,initial-scale=1,maximum-scale=1,shrink-to-fit=no,user-scalable=no,minimal-ui,viewport-fit=cover">
+    <meta aframe-injected="" name="mobile-web-app-capable" content="yes">
+    <meta aframe-injected="" name="theme-color" content="black">
+    <script src="https://aframe.io/aframe/dist/aframe-master.min.js"></script>
+<script src="https://aframe.io/aframe/examples/js/play-on-click.js"></script>
+    <script src="https://aframe.io/aframe/examples/js/hide-on-play.js"></script>
+</head>
+
+<body>
+    <a-scene inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="" device-orientation-permission-ui="">
+        <a-assets>
+            
+            <video id="videoFireworks" preload="auto" src="assets/assets.mp4" width="160"
+                height="90" autoplay="" loop="true" crossorigin="anonymous" muted playsinline=""
+                webkit-playsinline=""></video>
+        </a-assets>
+
+         <a-entity material="shader: flat; src: #videoFireworks" geometry="primitive: plane; width: 1.2; height: 2"
+            position="0 0 -1" rotation="0 0 0" play-on-click="" visible="false">
+        </a-entity>
+        <a-camera camera="" position="" rotation="" look-controls="" wasd-controls="">
+            <a-entity position="0 0 -1.5" text="align: center;
+                width: 6;
+                wrapCount: 100;
+                color: black;
+                value: Click or tap to start video" hide-on-play="#videoFireworks">
+            </a-entity>
+        </a-camera>
+        <canvas class="a-canvas a-grab-cursor" data-aframe-canvas="true" width="937" height="937" style=""></canvas>
+        <div class="a-loader-title" style="display: none;">Video</div>
+        <div class="a-enter-vr" aframe-injected=""><button class="a-enter-vr-button"
+                title="Enter VR mode with a headset or fullscreen mode on a desktop. Visit https://webvr.rocks or https://webvr.info for more information."
+                aframe-injected=""></button></div>
+        <div class="a-enter-ar a-hidden" aframe-injected=""><button class="a-enter-ar-button"
+                title="Enter AR mode with a headset or handheld device. Visit https://webvr.rocks or https://webvr.info for more information."
+                aframe-injected=""></button></div>
+        <div class="a-orientation-modal a-hidden" aframe-injected=""><button aframe-injected="">Exit VR</button></div>
+        <a-entity light="" data-aframe-default-light="" aframe-injected=""></a-entity>
+        <a-entity light="" position="" data-aframe-default-light="" aframe-injected=""></a-entity>
+    </a-scene>
+
+</body>
+
+</html>
