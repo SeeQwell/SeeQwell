@@ -22,7 +22,13 @@
             </div>
         </div>
     </div>
-    
+    <script>
+        let amount = document.querySelector('.cart__amount'),
+    cost = document.querySelector('.cart__cost span');
+amount.addEventListener('input', () => {
+    cost.innerHTML = amount.value * (100 / 85);
+});
+    </script>
     <br>
     
 <div class="wrapdva">
