@@ -23,10 +23,8 @@
         </div>
     </div>
     <script>
-        let amount = document.querySelector('.cart__amount'),
-         cost = document.querySelector('.cart__cost span');
-           amount.addEventListener('input', () => {
-             cost.innerHTML = amount.value * (100 / 85);
+        aq.addEventListener('input', function () {
+a.value = (this.value * 1.17647058823).toFixed(2);
 });
     </script>
     <br>
