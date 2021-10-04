@@ -83,9 +83,6 @@
 
     <a-scene>
         <a-assets timeout="30000">
-            <!-- Model source: https://sketchfab.com/3d-models/spinosaurus-2135501583704537907645bf723685e7
-             Model author: https://sketchfab.com/VapTor
-             Model license: CC Attribution -->
             <a-asset-item id="spinosaurus"
                 src="assets/asset.gltf"
                 response-type="arraybuffer"></a-asset-item>
@@ -95,8 +92,8 @@
 
        
 
-        <a-entity id="dino" position="0 0 -1" scale="0.3 0.3 0.3">
-            <a-entity position="0 0 0" rotation="0 55 0" gltf-model="#spinosaurus" animation-mixer
+        <a-entity id="dino" position="0 0 0" scale="0.1 0.1 0.1">
+            <a-entity position="0 0 0" rotation="0 0 0" gltf-model="#spinosaurus" animation-mixer
                 shadow="cast: true; receive: false"></a-entity>
         </a-entity>
 
@@ -114,30 +111,7 @@
             ar-shadows="opacity: 0.3" visible="false"></a-plane>
     </a-scene>
 
-    <div id="text">
-        <h1>A-Frame Spinosaurus for VR/AR</h1>
-
-        <p>
-            Model: <a
-                href="https://sketchfab.com/3d-models/spinosaurus-2135501583704537907645bf723685e7">Spinosaurus</a> by
-            <a href="https://sketchfab.com/VapTor">Vaptor-Studio</a>.
-        </p>
-        <p>
-            Size: <button id="btn_full">Full</button>
-            <button id="btn_half">1/2</button>
-            <button id="btn_quarter">1/4</button>
-        </p>
-
-        <p>
-            This requires browser support for WebXR's AR mode, for example an
-            <a href="https://developers.google.com/ar/discover/supported-devices">ARCore-compatible</a>
-            Android phone with Chrome version 81 or higher.
-        </p>
-
-        <p>
-            Powered by <a href="https://aframe.io/blog/aframe-v1.0.0/">A-Frame v1.0.0</a>.
-        </p>
-    </div>
+   
     <script>
         function setSize(scale) {
             document.getElementById('dino').setAttribute('scale', { x: scale, y: scale, z: scale });
