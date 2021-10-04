@@ -110,7 +110,30 @@
         <a-plane height="15" width="15" position="0 0 -3" rotation="-90 0 0" shadow="receive: true"
             ar-shadows="opacity: 0.3" visible="false"></a-plane>
     </a-scene>
+    <div id="text">
+        <h1>A-Frame Spinosaurus for VR/AR</h1>
 
+        <p>
+            Model: <a
+                href="https://sketchfab.com/3d-models/spinosaurus-2135501583704537907645bf723685e7">Spinosaurus</a> by
+            <a href="https://sketchfab.com/VapTor">Vaptor-Studio</a>.
+        </p>
+        <p>
+            Size: <button id="btn_full">Full</button>
+            <button id="btn_half">1/2</button>
+            <button id="btn_quarter">1/4</button>
+        </p>
+
+        <p>
+            This requires browser support for WebXR's AR mode, for example an
+            <a href="https://developers.google.com/ar/discover/supported-devices">ARCore-compatible</a>
+            Android phone with Chrome version 81 or higher.
+        </p>
+
+        <p>
+            Powered by <a href="https://aframe.io/blog/aframe-v1.0.0/">A-Frame v1.0.0</a>.
+        </p>
+    </div>
    
     <script>
         function setSize(scale) {
