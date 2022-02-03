@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    </head>
+<script>
+    if (window.location.protocol == "http:" &&
+        window.location.hostname != "localhost" &&
+        window.location.hostname != "127.0.0.1" &&
+        window.location.hostname != "[::1]") {
+        window.location = window.location.href.replace('http:', 'https:');
+    }
+</script>
+<script src="https://unpkg.com/aframe-extras@3.3.0/dist/aframe-extras.min.js"></script>
+<script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+
+    <body>
+    <a-scene>
+       <a-asset> 
+           
+           <a-asset-item id="cloud1" src="assets/asset1.gltf" response-type="arraybuffer"></a-asset-item>
+           <a-asset-item id="cloud2" src="assets/asset2.gltf" response-type="arraybuffer"></a-asset-item>
+           <a-asset-item id="cloud3" src="assets/asset3.gltf" response-type="arraybuffer"></a-asset-item>
+       </a-asset> 
+
+       <a-gltf-model src="#cloud1" 
+                    scale="0.03 0.03 0.03" 
+                    position="-4 -2 -5.5" 
+                    shadow="cast: true; receive: false"
+                    
+                    >
+                    
+                    </a-gltf-model>
+        <a-gltf-model src="#cloud2" 
+                    scale="0.085 0.085 0.085" 
+                    position="0 -14 -1" 
+                    rotation="0 -90 0"  
+                    shadow="cast: true; receive: false" 
+                    animation-mixer>
+        </a-gltf-model>
+        <a-gltf-model src="#cloud3" 
+                    scale="0.018 0.018 0.018" 
+                    position="4 0.5 -3" 
+                    shadow="cast: true; receive: false" 
+                    animation-mixer>
+        </a-gltf-model>
+        
+        <a-entity light="type: ambient; intensity: 0.7;"></a-entity>
+        <a-light type="directional" light="castShadow: true;
+                      shadowMapHeight: 3072;
+                      shadowMapWidth: 3072;
+                      shadowCameraLeft: -7;  
+                      shadowCameraRight: 5;
+                      shadowCameraBottom: -7;
+                      shadowCameraTop: 15;" id="light" target="cloud1" position="0 15 0"></a-light>
+
+        
+        <a-plane height="40" width="40" position="0 0 0" rotation="-90 0 0" shadow="receive: true"
+            ar-shadows="opacity: 0.3" visible="false"></a-plane>
+
+
+    </a-scene>
+
+
+</body>
+</html>
