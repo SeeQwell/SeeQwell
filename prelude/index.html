@@ -38,10 +38,12 @@
                 <a-entity
                     id="bowser-model"
                     scale="0.005 0.005 0.005"
-                    animation-mixer="loop: repeat"
+                    animation-mixer
                     gltf-model="#animated-asset"
                     class="clickable"
                     position="-1 0 0"
+                    visible="false"
+                    animation="property: visible; from: false; to: true; dur: 5000"
                     gesture-handler
                 ></a-entity>
                 
