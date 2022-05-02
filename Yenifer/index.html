@@ -84,11 +84,11 @@
 
         <a-entity id="dino" position="0 0 0" scale="0.0085 0.0085 0.0085">
             <a-entity position="0 74 -40" rotation="0 0 0" gltf-model="#spinosaurus" animation-mixer
-                shadow="cast: true; receive: true"></a-entity>
+                shadow="cast: true; receive: false"></a-entity>
         </a-entity>
 
         <a-entity light="type: ambient; intensity: 0.5;"></a-entity>
-        <a-light type="directional" light="castShadow: false;
+        <a-light type="directional" light="castShadow: true;
                               shadowMapHeight: 4096;
                               shadowMapWidth: 4096;
                               shadowCameraLeft: -7;
